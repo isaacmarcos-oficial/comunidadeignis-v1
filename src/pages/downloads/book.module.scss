@@ -1,0 +1,33 @@
+.postContent {
+  p, ul {
+      margin-bottom: 1.5rem;
+  }
+
+  ul {
+      padding-left: 2rem;
+      list-style: inside;
+
+      li {
+          margin: 0.5rem 0;
+      }
+  }
+
+  img, figure, .block-img {
+    float: left;
+    margin: 0 40px 20px -100px;
+    padding-top: 8px;
+    position: relative;
+    width: 220px;
+  }
+
+  h3 {
+    font-size: 1.6875rem;
+  }
+
+  aside {
+    border-left: 4px solid #fcbf49;
+    margin: 40px 0;
+    padding: 0 10px 5px 30px;
+    position: relative;
+  }
+}

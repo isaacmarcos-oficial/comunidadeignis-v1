@@ -1,0 +1,42 @@
+.postContent {
+  p, ul {
+      margin-bottom: 1.5rem;
+  }
+
+  ul {
+      padding-left: 2rem;
+      list-style: inside;
+
+      li {
+          margin: 0.5rem 0;
+      }
+  }
+
+  figure {
+    float: left;
+    margin: 0 40px 20px -100px;
+    padding-top: 8px;
+    position: relative;
+    width: 320px;
+  }
+
+  h3 {
+    font-size: 1.6875rem;
+  }
+
+  aside {
+    border-left: 4px solid #fcbf49;
+    margin: 40px 0;
+    padding: 0 10px 5px 30px;
+    position: relative;
+  }
+}
+
+.container {
+  background-color: #fcbf49;
+  -webkit-mask-image: linear-gradient(to top, transparent 5%, black 100%);
+  mask-image: linear-gradient(to center, transparent 5%, black 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 1000% at 50% 50%, black 0%, transparent 50%);
+  // mix-blend-mode: luminosity;
+  opacity: 0.5;
+}
