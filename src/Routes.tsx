@@ -12,10 +12,11 @@ import { Comunidade } from "./pages/Comunidade"
 import { Contato } from "./pages/Contato"
 import { Downloads } from "./pages/downloads/Downloads"
 import { Book } from "./pages/downloads/[slug]"
-import { Meditacoes } from "./pages/Meditacoes/Meditacoes"
-import { MeditacoesPost } from "./pages/Meditacoes/[slug]"
+import { Evangelho } from "./pages/Evangelho/Evangelho"
+import { EvangelhoPost } from "./pages/Evangelho/[slug]"
 
 export function AppRoutes() {
+
   return (
     <Router>
       <Routes>
@@ -32,8 +33,8 @@ export function AppRoutes() {
         
         <Route path="/contato" element={<Contato />} />
         
-        <Route path="/meditacoes" element={<Meditacoes />} />
-        <Route path="/meditacoes/post" element={<MeditacoesPost />} />
+        <Route path="/evangelho" element={<Evangelho />} />
+        <Route path="/evangelho/evangelhopost" element={<EvangelhoPost />} />
       </Routes>
     </Router>
   )

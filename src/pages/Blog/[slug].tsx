@@ -1,9 +1,9 @@
 import { Flex, Heading, Text, Image, Wrap, WrapItem } from "@chakra-ui/react";
 
-import styles from './post.module.scss'
-
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
+
+import styles from './post.module.scss'
 
 export function Post() {
   return (
@@ -20,7 +20,6 @@ export function Post() {
                 <Flex direction="column" align="center" justify="center">
                   <Flex  direction="column" w="100vw" h={{ base: "320px", lg: "450px" }} justify="center" align="center" bgColor="#000" zIndex="hide">
                     <Image className={styles.container} bgPosition="0% 15%" bgImage="/Lepanto.jpg" maxW="1350px" w="100%" h="100%" bgSize="cover"
-                      // opacity="0.1"
                     />
                   </Flex>
                   <Flex direction="column" w={{ base: "90%", lg: "48.75rem" }}  >
@@ -44,7 +43,6 @@ export function Post() {
           </Flex>
         </Flex>
 
-        {/* <Comments /> */}
       </Flex>
 
       <Footer />

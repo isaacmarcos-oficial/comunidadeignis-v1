@@ -50,15 +50,11 @@ export function DrawerMenu() {
 
           
             <Flex flexDirection="column" gap="4" mt="6" color="gray.800">
-              <Button _focus={{ boxShadow: "none" }} _hover={{ bgColor: "yellow.500" }}>
-                <a href="https://escola.comunidadeignis.com.br/" target="_blank" >
+              <Button as={Link} _focus={{ boxShadow: "none" }} _hover={{ bgColor: "yellow.500" }} href="https://escola.comunidadeignis.com.br/" target="_blank" style={{ textDecoration:"none" }} >
                   Escola de Formação
-                </a>
               </Button>
-              <Button _focus={{ boxShadow: "none" }} _hover={{ bgColor: "yellow.500" }}>
-                <a href="https://edicoes-ignis.lojaintegrada.com.br/" target="_blank">
-                  Edições Ignis
-                </a>
+              <Button as={Link} _focus={{ boxShadow: "none" }} _hover={{ bgColor: "yellow.500" }} href="https://edicoes-ignis.lojaintegrada.com.br/" target="_blank" style={{ textDecoration:"none" }} >
+                Edições Ignis
               </Button>
             </Flex>
           </DrawerBody>

@@ -5,7 +5,7 @@ import styles from './post.module.scss'
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 
-export function MeditacoesPost() {
+export function EvangelhoPost() {
   return (
 
     <Flex direction="column" align="center" justify="center">
