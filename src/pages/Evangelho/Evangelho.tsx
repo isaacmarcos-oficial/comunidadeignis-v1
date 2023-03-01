@@ -67,7 +67,7 @@ export function Evangelho() {
 
       <Flex direction="column" my="2rem" mt="8rem" align="center" justify="center">
         <Heading fontSize="2rem" my="0.5rem" lineHeight="1.6875rem" mb=".5rem" color="yellow.800" textAlign={{ base:"center", md: "center", lg:"inherit" }}>
-          BLOG
+          MEDITAÇÕES DOMINICAIS
         </Heading>
       
         <Flex align="center" justify="center" px={{ base:"2rem" }}>

@@ -40,25 +40,25 @@ export function Comunidade() {
       <Fundator
         title="Celito Garcia"
         description="Celito Garcia é leigo católico, pregador, casado com a Micheli Garcia. Pai do Bruno Augusto e do Caio Tomás. Missionário e membro fundador da Comunidade Católica Missionária IGNIS. É também Freire de Armas na Militia Santae Mariae onde atua na Academia Internacional de Estudos Litúrgicos São Gregório Magno. Pertence a Diocese de Votuporanga – SP."
-        image="/Lepanto.jpg"
+        image="/Celito-Garcia.jpg"
       />
 
       <Fundator
         title="Robson Maria"
-        description="SEM DESCRIÇÃO"
-        image="/Lepanto.jpg"
+        description="BIO EM BREVE"
+        image="/Robson-de-Maria.jpg"
       />
 
       <Fundator
         title="Paulo Júnior"
-        description="SEM DESCRIÇÃO"
-        image="/Lepanto.jpg"
+        description="BIO EM BREVE"
+        image="/Paulo-Junior.jpg"
       />
 
       <Fundator
         title="Denilson Moretti"
-        description="SEM DESCRIÇÃO"
-        image="/Lepanto.jpg"
+        description="BIO EM BREVE"
+        image="/Denilson-Moretti.jpg"
       />
 
       <Footer />

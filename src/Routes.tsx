@@ -23,18 +23,18 @@ export function AppRoutes() {
         <Route path="/" element={<Home />} />
         
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/post" element={<Post />} />
+        <Route path="/blog/:slug" element={<Post />} />
         
         <Route path="/comunidade" element={<Comunidade />} />
         <Route path="/baluartes" element={<Baluartes />} />
         
         <Route path="/downloads" element={<Downloads />} />
-        <Route path="/downloads/book" element={<Book />} />
+        <Route path="/downloads/:slug" element={<Book />} />
         
         <Route path="/contato" element={<Contato />} />
         
         <Route path="/evangelho" element={<Evangelho />} />
-        <Route path="/evangelho/evangelhopost" element={<EvangelhoPost />} />
+        <Route path="/evangelho/:slug" element={<EvangelhoPost />} />
       </Routes>
     </Router>
   )

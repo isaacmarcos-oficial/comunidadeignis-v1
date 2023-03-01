@@ -88,7 +88,7 @@ export function HomeEvangelii() {
                 {evangelii.excerpt}
               </Text>
 
-              <Button as={Link} mt="6" bgColor="yellow.700" _hover={{ bgColor: "yellow.700", color: "white", opacity: "85%" }} style={{ textDecoration:"none" }} href={evangelii.slug} >
+              <Button as={Link} mt="6" bgColor="yellow.700" _hover={{ bgColor: "yellow.700", color: "white", opacity: "85%" }} style={{ textDecoration:"none" }} href={`/evangelho/${evangelii.slug}`} >
                   Leia agora
               </Button>
             </Box>

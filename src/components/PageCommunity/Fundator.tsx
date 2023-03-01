@@ -20,8 +20,8 @@ export function Fundator({ title, description, image }: FundatorProps) {
         </Text>
       </Flex>
 
-      <Flex align="center">
-        <Image src={image} h={{ base:"250px", md:"300px"}} w={{ base:"100vw", md:"500px"}} objectFit="cover" mr={{ base:"none", lg:"3rem" }} />
+      <Flex align="center" maxW={{ base:"100vw", md:"500px", lg:"500px" }} w="100%" >
+        <Image src={image} h={{ base:"250px", md:"300px"}} w="500px" objectFit="cover" mr={{ base:"none", lg:"3rem" }} />
       </Flex>
     </Flex>
     </Flex>

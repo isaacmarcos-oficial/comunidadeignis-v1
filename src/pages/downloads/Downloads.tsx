@@ -78,11 +78,11 @@ export function Downloads() {
                 <Flex key={download.slug} minH="450px" maxH="450px" bgColor="gray.100" style={{ textDecoration: "none" }} mb="-3rem" direction="column" align="center" maxW={{ base: "100%", md: "400px", lg: "300px" }} borderRadius="10"
                 
                 >
-                  <Link href={`/downloads/${download.slug}`} w="100%" minH="180px" maxH="180px" bgColor="black" borderTopRadius="10" cursor="pointer" >
+                  <Link href={`/downloads/${download.slug}`} target="_blank" w="100%" minH="180px" maxH="180px" bgColor="black" borderTopRadius="10" cursor="pointer" >
                     <Image objectFit="cover" w="100%" minH="180px" maxH="180px" src={download.banner.url} _hover={{ opacity: 0.7 }} transition="opacity 0.5s" borderTopRadius="10" mb="2" />
                   </Link>
                   <Flex direction="column" align="center" justify="space-between" p="1rem" h="100%" >
-                    <Link href={`/downloads/${download.slug}`} style={{ textDecoration:"none"}} sx={{
+                    <Link href={`/downloads/${download.slug}`} target="_blank" style={{ textDecoration:"none"}} sx={{
                       textDecoration: "none",
                       "&:hover h2": {
                         color: "yellow.700",
@@ -98,11 +98,11 @@ export function Downloads() {
                         {download.excerpt}
                       </Text>
                     </Link>
-                    <Button bgColor="gray.600" color="gray.50" _hover={{ bgColor: "yellow.800", zoom: "1rem" }} w="100%" >
-                      <Link href={`/downloads/${download.slug}`}>
+                    <Link href={`/downloads/${download.slug}`} target="_blank" w="100%" >
+                      <Button bgColor="gray.600" color="gray.50" _hover={{ bgColor: "yellow.800", zoom: "1rem" }} w="100%" style={{ textDecoration: "none" }}>
                         DOWNLOAD
-                      </Link>
-                    </Button>
+                      </Button>
+                    </Link>
 
                   </Flex>
                 </Flex>

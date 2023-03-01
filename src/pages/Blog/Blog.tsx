@@ -77,7 +77,7 @@ export function Blog() {
               {posts.map(post => (
                 <Box key={post.slug} display={{ lg: "flex", md: "flex", base: "table-column" }} lineHeight="1.5rem" pb="1.875rem" borderBottom="1px" borderColor="gray.200"  >
                   <Flex bgColor="black" w={{ lg: "295px", md: "295px", base: "100%" }} minW={{ lg: "295px", md: "295px", base: "100%" }} h="185px">
-                    <Link href={`/blog/${post.slug}`} target="_blank" >
+                    <Link href={`/blog/${post.slug}`} >
                     <Image w="100%" h="100%" objectFit="cover" src={post.banner.url} _hover={{ opacity: 0.7 }} transition="opacity 0.5s"
                     />
                     </Link>
@@ -92,7 +92,7 @@ export function Blog() {
                       "& h2": {
                         transition: "color 0.2s ease-in-out "
                       }
-                    }} target="_blank"
+                    }}
                     flexDirection="column" px="0.5rem" ml="25px"
                   >
                     <Flex fontSize="0.75rem" w="100%" >
