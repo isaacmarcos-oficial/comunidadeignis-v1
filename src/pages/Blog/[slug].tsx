@@ -3,6 +3,7 @@ import { Flex, Heading, Text, Image, Wrap, WrapItem } from "@chakra-ui/react";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 
+import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
 import { RichText } from 'prismic-dom';
 import { getPrismicClient } from "../../services/prismic";
@@ -57,10 +58,13 @@ export function Post() {
   return (
     <Flex direction="column" align="center" justify="center">
       <Header />
-      <title>Comunidade Ignis | Post </title>
-      <meta property="og:title" content={postData.title} />
-      <meta property="og:image" content={postData.banner.url} />
-      <meta property="og:description" content={postData.content} />
+      
+      <Helmet>
+        <title>Comunidade Ignis | Post </title>
+        <meta property="og:title" content={postData.title} />
+        <meta property="og:image" content={postData.banner.url} />
+        <meta property="og:description" content={postData.content} />
+      </Helmet>
 
       <Flex direction="column" >
         <Flex mb="48px" direction="column" >
