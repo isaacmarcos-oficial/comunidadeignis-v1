@@ -58,6 +58,9 @@ export function Post() {
     <Flex direction="column" align="center" justify="center">
       <Header />
       <title>Comunidade Ignis | Post </title>
+      <meta property="og:title" content={postData.title} />
+      <meta property="og:image" content={postData.banner.url} />
+      <meta property="og:description" content={postData.content} />
 
       <Flex direction="column" >
         <Flex mb="48px" direction="column" >
