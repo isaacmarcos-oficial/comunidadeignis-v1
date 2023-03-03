@@ -77,7 +77,7 @@ export function Evangelho() {
               {evangeliis.map(evangelii => (
                 <Box key={evangelii.slug} display={{ lg: "flex", md: "flex", base: "table-column" }} lineHeight="1.5rem" pb="1.875rem" borderBottom="1px" borderColor="gray.200"  >
                   <Flex bgColor="black" w={{ lg: "295px", md: "295px", base: "100%" }} minW={{ lg: "295px", md: "295px", base: "100%" }} h="185px">
-                    <Link href={`/blog/${evangelii.slug}`} target="_blank" >
+                    <Link href={`/blog/${evangelii.slug}`} target="_blank" w="100%" >
                     <Image w="100%" h="100%" objectFit="cover" src={evangelii.banner.url} _hover={{ opacity: 0.7 }} transition="opacity 0.5s"
                     />
                     </Link>
