@@ -60,7 +60,7 @@ export function Post() {
       <Header />
       
       <Helmet>
-        <title>Comunidade Ignis | Post </title>
+        <title>Comunidade Ignis | {postData.title} </title>
         <meta property="og:title" content={postData.title} />
         <meta property="og:image" content={postData.banner.url} />
         <meta property="og:description" content={postData.content} />
