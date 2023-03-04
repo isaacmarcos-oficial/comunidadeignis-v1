@@ -59,8 +59,8 @@ export function Post() {
     <Flex direction="column" align="center" justify="center">
       <Header />
       
-      <Helmet>
         <title>Comunidade Ignis | {ReactHtmlParser(postData.title)} </title>
+      <Helmet>
         <meta property="og:title" content={`Comunidade Ignis | ${ReactHtmlParser(postData.title)}`} />
         <meta property="og:description" content={`${ReactHtmlParser(postData.content)}`} />
         <meta property="og:type" content="article" />
@@ -78,13 +78,16 @@ export function Post() {
                       <Image className={styles.container} bgPosition="0% 15%" bgImage={postData.banner.url} maxW="1350px" w="100%" h="100%" bgSize="cover"
                       />
                     </Flex>
-                    <Flex direction="column" w={{ base: "90%", lg: "48.75rem" }}  >
+                    <Flex direction="column" w={{ base: "90%", lg: "48.75rem" }} mt="36px" >
                       <Flex direction="column" align="center" justify="center">
+                        <Text color="yellow.800" fontWeight="700" textTransform="uppercase" borderBottom="3px solid">
+                          {postData.tag}
+                        </Text>
                         <Heading
-                          color="gray.850" mt="36px" fontFamily="Gentium" fontSize={{ base: "1.5rem", lg: "2.25rem" }} textAlign="center">
+                          color="gray.850" mt={5} fontFamily="Gentium" fontSize={{ base: "1.5rem", lg: "2.25rem" }} textAlign="center">
                           {ReactHtmlParser(postData.title)}
                         </Heading>
-                        <Text mt=".5rem" fontStyle="italic" color="gray.300" fontWeight="600" fontSize=".875rem" mb="6" >
+                        <Text mt=".25rem" fontStyle="italic" color="gray.300" fontWeight="600" fontSize=".875rem" mb="6" >
                           {postData.author} | {postData.updatedAt}
                         </Text >
                       </Flex>
