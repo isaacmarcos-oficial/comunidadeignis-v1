@@ -61,8 +61,8 @@ export function Post() {
       
       <Helmet>
         <title>Comunidade Ignis | {postData.title} </title>
-        <meta property="og:title" content={`Comunidade Ignis | ${postData.title}`} />
-        <meta property="og:description" content={postData.content} />
+        <meta property="og:title" content={`Comunidade Ignis | ${ReactHtmlParser(postData.title)}`} />
+        <meta property="og:description" content={`${ReactHtmlParser(postData.content)}`} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://www.comunidadeignis.com.br/${postData.slug}`} />
         <meta property="og:image" content={postData.banner.url} />
