@@ -6,10 +6,10 @@ export function Footer() {
   return (
     <Flex w="100%" py="3rem" mt="3rem" bgColor="blackAlpha.900" align="center" justify="center" borderY="5px solid" borderColor="yellow.700" >
 
-      <Flex flexDirection="column">
-        <Flex flexDirection={{ base:"column", md:"row", lg:"row" }} maxW="1320px" w="100%" align="center" justify="space-between" px={{ base: "4rem", lg:"none"}}>
+      <Flex flexDirection="column" w="100%" maxW="1320px" align="center" justify="center" >
+        <Flex flexDirection={{ base:"column", md:"row", lg:"row" }} px={{ base: "4rem", lg:"none"}} >
 
-          <Flex flexDirection={{ base:"column", md:"row", lg:"row" }} align="center" >
+          <Flex flexDirection={{ base:"column", md:"row", lg:"row" }} align="center" justify="center"  >
             <Image src="/logo.svg" h={{ base:"6rem", lg:"8rem"}} mr={{ base:"none", md:"6"}} mb={{ base:"1rem", md:"none" }} />
             <Text w={{ base:"70%", md:"50%", lg:"30%" }} fontSize={{ base:"sm", md:"md"}} textAlign={{ base:"center", md:"initial", lg:"initial" }} color="gray.300" fontFamily="Gentium" fontStyle="italic">
               Defender a Doutrina da Igreja
@@ -19,7 +19,7 @@ export function Footer() {
           </Flex>
           
 
-          <Flex w={{ base:"100%", md:"400px"}} display="table-column" my="2rem" align="center" justify="center" >
+          {/* <Flex w={{ base:"100%", md:"400px"}} display="table-column" my="2rem" align="center" justify="center"  >
             <form
               action="process.E"
             >
@@ -39,7 +39,7 @@ export function Footer() {
                   </InputRightElement>
               </InputGroup>
             </form>
-          </Flex>
+          </Flex> */}
           
         </Flex>
       
