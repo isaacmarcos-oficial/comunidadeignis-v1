@@ -27,7 +27,14 @@ export const theme = extendTheme({
       body: {
         bg: 'gray.50',
         color: 'gray.800'
+      },
+      a: {
+        color: "yellow.600",
+        _hover: {
+          color: "yellow.700"
+        }
       }
+      
     }
   }
 })

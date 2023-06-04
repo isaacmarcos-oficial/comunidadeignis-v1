@@ -59,26 +59,26 @@ export function EvangelhoPost() {
       <title>Comunidade Ignis | Post </title>
 
       <Flex direction="column" >
-        <Flex mb="48px" direction="column" >
+        <Flex mb="3rem" direction="column" >
           <Flex>
             <Wrap >
               <WrapItem >
                 <Flex direction="column" align="center" justify="center">
-                  <Flex  direction="column" w="100vw" h={{ base: "320px", lg: "450px" }} justify="center" align="center" bgColor="#000" zIndex="hide">
-                    <Image className={styles.container} bgPosition="0% 15%" bgImage={evangelhoData.banner.url} maxW="1350px" w="100%" h="100%" bgSize="cover"
+                  <Flex  direction="column" w="100vw" h={{ base: "20rem", lg: "28.125rem" }} justify="center" align="center" bgColor="#000" zIndex="hide">
+                    <Image className={styles.container} bgPosition="0% 15%" bgImage={evangelhoData.banner.url} maxW="84.375rem" w="100%" h="100%" bgSize="cover"
                     />
                   </Flex>
-                  <Flex direction="column" w={{ base: "90%", lg: "48.75rem" }}  >
+                  <Flex direction="column" w={{ base: "90%", lg: "780px" }}  >
                       <Flex direction="column" align="center" justify="center">
                         <Heading
-                          color="gray.850" mt="36px" fontFamily="Gentium" fontSize={{ base: "1.5rem", lg: "2.25rem" }} textAlign="center">
+                          color="gray.850" mt="2.25rem" fontFamily="Gentium" fontSize={{ base: "24px", lg: "36px" }} textAlign="center">
                         {ReactHtmlParser(evangelhoData.title)}    
                         </Heading>
-                        <Text mt=".5rem" fontStyle="italic" color="gray.300" fontWeight="600" fontSize=".875rem" mb="6" >
-                      
+                        <Text mt="8px" fontStyle="italic" color="gray.300" fontWeight="600" fontSize="14px" mb="6" >
+                          {ReactHtmlParser(evangelhoData.subtitle)}    
                         </Text >
                       </Flex>
-                    <Text className={styles.postContent} color="gray.800" fontSize={{ base: "16px", lg: "18px" }} lineHeight={{ base: "28px", lg: "32px" }}  letterSpacing=".1008px"
+                    <Text className={styles.postContent} color="gray.800" fontSize={{ base: "1rem", lg: "1.125rem" }} lineHeight={{ base: "1.75rem", lg: "2rem" }}  letterSpacing=".0063rem"
                     >
                       {ReactHtmlParser(evangelhoData.content)}
                     </Text>
