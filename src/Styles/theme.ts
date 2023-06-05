@@ -34,7 +34,6 @@ export const theme = extendTheme({
           color: "yellow.700"
         }
       }
-      
     }
   }
 })

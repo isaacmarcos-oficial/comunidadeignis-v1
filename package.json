@@ -14,6 +14,7 @@
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@prismicio/client": "5.1.0",
+    "@sendinblue/client": "^3.3.1",
     "@types/prismic-dom": "^2.1.1",
     "@types/react-helmet": "^6.1.6",
     "@types/react-helmet-async": "^1.0.3",

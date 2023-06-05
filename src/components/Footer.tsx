@@ -1,8 +1,8 @@
-import { Flex, Image, Input, InputGroup, InputLeftElement, InputRightElement, Link, Text } from "@chakra-ui/react";
-import { HiMail } from "react-icons/hi"
-import { BsArrowRightSquareFill } from "react-icons/bs";
+import { Flex, Image, Text } from "@chakra-ui/react";
+import { Newsletter } from "./Newsletter";
 
 export function Footer() {
+
   return (
     <Flex w="100%" py="3rem" mt="3rem" bgColor="blackAlpha.900" align="center" justify="center" borderY="5px solid" borderColor="yellow.700" >
 
@@ -17,29 +17,8 @@ export function Footer() {
               se preciso for
             </Text>
           </Flex>
-          
-
-          {/* <Flex w={{ base:"100%", md:"400px"}} display="table-column" my="2rem" align="center" justify="center"  >
-            <form
-              action="process.E"
-            >
-              <Text fontSize="2xl" textAlign="center" fontWeight="600" color="gray.100">
-                Assine nossa Newsconstter
-              </Text>
-
-              <InputGroup>
-                  <InputLeftElement children={<HiMail color='gray.300'/>}  />
-                  <Input
-                    color= "white"
-                    type="email"
-                    placeholder="Digite seu email"
-                  />
-                  <InputRightElement as={Link} color="yellow.500" bg="none" fontSize="4rem" type="submit">
-                    <BsArrowRightSquareFill />
-                  </InputRightElement>
-              </InputGroup>
-            </form>
-          </Flex> */}
+        
+          <Newsletter/>
           
         </Flex>
       
