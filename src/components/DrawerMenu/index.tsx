@@ -40,20 +40,20 @@ export function DrawerMenu() {
           <DrawerBody color="gray.100">
 
             <Flex flexDirection="column">
-              <MenuList title="Início" adress="/" />
-              <MenuList title="A Comunidade" adress="/comunidade" />
-              <MenuList title="Baluartes" adress="/baluartes" />
-              <MenuList title="Downloads" adress="/downloads" />
-              <MenuList title="Blog" adress="/blog" />
-              <MenuList title="Contato" adress="/contato" />
+              <MenuList title="Início" address="/" />
+              <MenuList title="A Comunidade" address="/comunidade" />
+              <MenuList title="Baluartes" address="/baluartes" />
+              <MenuList title="Downloads" address="/downloads" />
+              <MenuList title="Blog" address="/blog" />
+              <MenuList title="Contato" address="/contato" />
             </Flex>
 
           
             <Flex flexDirection="column" gap="4" mt="6" color="gray.800">
-              <Button as={Link} _focus={{ boxShadow: "none" }} _hover={{ bgColor: "yellow.500" }} href="https://escola.comunidadeignis.com.br/" target="_blank" style={{ textDecoration:"none" }} >
+              <Button as={Link} _focus={{ boxShadow: "none" }} _hover={{ bgColor: "yellow.500", color:"gray.800" }} href="https://escola.comunidadeignis.com.br/" target="_blank" style={{ textDecoration:"none" }} >
                   Escola de Formação
               </Button>
-              <Button as={Link} _focus={{ boxShadow: "none" }} _hover={{ bgColor: "yellow.500" }} href="https://edicoes-ignis.lojaintegrada.com.br/" target="_blank" style={{ textDecoration:"none" }} >
+              <Button as={Link} _focus={{ boxShadow: "none" }} _hover={{ bgColor: "yellow.500", color:"gray.800" }} href="https://edicoes-ignis.lojaintegrada.com.br/" target="_blank" style={{ textDecoration:"none" }} >
                 Edições Ignis
               </Button>
             </Flex>
