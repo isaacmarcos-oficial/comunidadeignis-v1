@@ -95,7 +95,7 @@ export function Post() {
                       >
                         {ReactHtmlParser(postData.content)}
                       </Text>
-                    <Flex bgColor="gray.100" w="100%" p="2rem 2rem 0 2rem" borderRadius="10" >
+                    <Flex bgColor="gray.100" w="100%" p="2rem 2rem 0 2rem" borderRadius="10" align="center" justify="center" >
                       <Comments
                         website-id={9232}
                         page-url={slug}
