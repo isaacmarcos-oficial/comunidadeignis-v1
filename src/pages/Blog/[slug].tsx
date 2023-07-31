@@ -10,6 +10,8 @@ import { getPrismicClient } from "../../services/prismic";
 import { useEffect, useState } from "react";
 import ReactHtmlParser from 'react-html-parser';
 
+import { Comments } from '@hyvor/hyvor-talk-react'
+
 import styles from './post.module.scss'
 
 
@@ -53,7 +55,7 @@ export function Post() {
   
   useEffect(() => {
     getPost()
-  }, )
+  },)
 
   return (
     <Flex direction="column" align="center" justify="center">
@@ -64,7 +66,7 @@ export function Post() {
         <meta property="og:title" content={`Comunidade Ignis | ${ReactHtmlParser(postData.title)}`} />
         <meta property="og:description" content={`${ReactHtmlParser(postData.content)}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://www.comunidadeignis.com.br/${postData.slug}`} />
+        <meta property="og:url" content={`https://www.comunidadeignis.com.br/blog/${postData.slug}`} />
         <meta property="og:image" content={postData.banner.url} />
       </Helmet>
 
@@ -95,7 +97,15 @@ export function Post() {
                       >
                         {ReactHtmlParser(postData.content)}
                       </Text>
+                    <Flex bgColor="gray.100" w="100%" p="2rem 2rem 0 2rem" borderRadius="10" >
+                      <Comments
+                        website-id={9232}
+                        page-url={slug}
+                        page-title={postData.title}
+                      />
                     </Flex>
+                    </Flex>
+                    
                   </Flex>
               </WrapItem>
             </Wrap>
