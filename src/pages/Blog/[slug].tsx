@@ -9,7 +9,6 @@ import { RichText } from 'prismic-dom';
 import { getPrismicClient } from "../../services/prismic";
 import { useEffect, useState } from "react";
 import ReactHtmlParser from 'react-html-parser';
-
 import { Comments } from '@hyvor/hyvor-talk-react'
 
 import styles from './post.module.scss'
@@ -60,7 +59,6 @@ export function Post() {
   return (
     <Flex direction="column" align="center" justify="center">
       <Header />
-      
         <title>Comunidade Ignis | {ReactHtmlParser(postData.title)} </title>
       <Helmet>
         <meta property="og:title" content={`Comunidade Ignis | ${ReactHtmlParser(postData.title)}`} />
@@ -91,7 +89,7 @@ export function Post() {
                         </Heading>
                         <Text mt=".25rem" fontStyle="italic" color="gray.300" fontWeight="600" fontSize=".875rem" mb="6" >
                           {postData.author} | {postData.updatedAt}
-                        </Text >
+                        </Text>
                       </Flex>
                       <Text className={styles.postContent} color="gray.800" fontSize={{ base: "16px", lg: "18px" }} lineHeight={{ base: "28px", lg: "32px" }} letterSpacing=".1008px"
                       >
