@@ -1,4 +1,4 @@
-import { Flex, Heading, Text, Image, Wrap, WrapItem } from "@chakra-ui/react";
+import { Flex, Heading, Text, Image, Wrap, WrapItem, Divider } from "@chakra-ui/react";
 
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
@@ -9,10 +9,8 @@ import { RichText } from 'prismic-dom';
 import { getPrismicClient } from "../../services/prismic";
 import { useEffect, useState } from "react";
 import ReactHtmlParser from 'react-html-parser';
-import { Comments } from '@hyvor/hyvor-talk-react'
 
 import styles from './post.module.scss'
-
 
 export function Post() {
   const params = useParams()
@@ -95,13 +93,9 @@ export function Post() {
                       >
                         {ReactHtmlParser(postData.content)}
                       </Text>
-                    <Flex bgColor="gray.100" w="100%" p="2rem 2rem 0 2rem" borderRadius="10" align="center" justify="center" >
-                      <Comments
-                        website-id={9232}
-                        page-url={slug}
-                        page-title={postData.title}
-                      />
-                    </Flex>
+
+                       <Divider/> 
+                      
                     </Flex>
                     
                   </Flex>
