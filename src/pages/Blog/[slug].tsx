@@ -34,6 +34,7 @@ export function Post() {
     },
     content: "",
     updatedAt: "",
+    note: "",
   });
 
   const getPost = async () => {
@@ -49,6 +50,7 @@ export function Post() {
       author: RichText.asText(response.data.author),
       title: RichText.asHtml(response.data.title),
       content: RichText.asHtml(response.data.content),
+      note: RichText.asHtml(response.data.note),
       updatedAt: response.last_publication_date
         ? new Date(response.last_publication_date).toLocaleDateString("pt-BR", {
             day: "2-digit",
@@ -58,6 +60,15 @@ export function Post() {
         : "",
     });
   };
+
+  function calculateReadingTime(content) {
+    const wordsPerMinute = 200; // Número médio de palavras por minuto
+    const text = content.replace(/<[^>]*>/g, ""); // Remover tags HTML para contar apenas o texto
+    const wordCount = text.split(/\s+/).length; // Contar palavras
+    const readingTime = Math.ceil(wordCount / wordsPerMinute);
+
+    return readingTime;
+  }
 
   useEffect(() => {
     getPost();
@@ -84,7 +95,7 @@ export function Post() {
         <meta property="og:image" content={postData.banner.url} />
       </Helmet>
 
-      <Flex direction="column">
+      <Flex mt="65px" direction="column">
         <Flex mb="48px" direction="column">
           <Flex>
             <Wrap>
@@ -93,7 +104,7 @@ export function Post() {
                   <Flex
                     direction="column"
                     w="100vw"
-                    h={{ base: "320px", lg: "450px" }}
+                    h={{ base: "200px", md: "320px", lg: "450px" }}
                     justify="center"
                     align="center"
                     bgColor="#000"
@@ -101,7 +112,7 @@ export function Post() {
                   >
                     <Image
                       className={styles.container}
-                      bgPosition={{lg: "0% 15%", base:"center"}}
+                      bgPosition={{ lg: "0% 15%", base: "center" }}
                       bgImage={postData.banner.url}
                       maxW="1350px"
                       w="100%"
@@ -127,7 +138,7 @@ export function Post() {
                         color="gray.850"
                         mt={5}
                         fontFamily="Gentium"
-                        fontSize={{ base: "1.5rem", lg: "2.25rem" }}
+                        fontSize={{ base: "1.75rem", lg: "2.25rem" }}
                         textAlign="center"
                       >
                         {ReactHtmlParser(postData.title)}
@@ -139,8 +150,11 @@ export function Post() {
                         fontWeight="600"
                         fontSize=".875rem"
                         mb="6"
+                        textAlign="center"
                       >
-                        {postData.author} | {postData.updatedAt}
+                        {postData.author} <br />
+                        {postData.updatedAt} • Tempo de leitura:{" "}
+                        {calculateReadingTime(postData.content)} minutos
                       </Text>
                     </Flex>
                     <Text
@@ -154,6 +168,16 @@ export function Post() {
                     </Text>
 
                     <Divider />
+
+                    <Text
+                      className={styles.postNote}
+                      color="gray.800"
+                      fontSize={{ base: "16px", lg: "18px" }}
+                      lineHeight={{ base: "28px", lg: "32px" }}
+                      letterSpacing=".1008px"
+                    >
+                      {ReactHtmlParser(postData.note)}
+                    </Text>
                   </Flex>
                 </Flex>
               </WrapItem>
