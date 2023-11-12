@@ -18,7 +18,7 @@ import { getPrismicClient } from "../../services/prismic";
 import { useEffect, useState } from "react";
 import ReactHtmlParser from "react-html-parser";
 
-import styles from "./post.module.scss";
+import styles from "../../Styles/post.module.scss";
 
 export function Post() {
   const params = useParams();
@@ -95,94 +95,80 @@ export function Post() {
         <meta property="og:image" content={postData.banner.url} />
       </Helmet>
 
-      <Flex mt="65px" direction="column">
-        <Flex mb="48px" direction="column">
-          <Flex>
-            <Wrap>
-              <WrapItem>
-                <Flex direction="column" align="center" justify="center">
-                  <Flex
-                    direction="column"
-                    w="100vw"
-                    h={{ base: "200px", md: "320px", lg: "450px" }}
-                    justify="center"
-                    align="center"
-                    bgColor="#000"
-                    zIndex="hide"
-                  >
-                    <Image
-                      className={styles.container}
-                      bgPosition={{ lg: "0% 15%", base: "center" }}
-                      bgImage={postData.banner.url}
-                      maxW="1350px"
-                      w="100%"
-                      h="100%"
-                      bgSize="cover"
-                    />
-                  </Flex>
-                  <Flex
-                    direction="column"
-                    w={{ base: "90%", lg: "48.75rem" }}
-                    mt="36px"
-                  >
-                    <Flex direction="column" align="center" justify="center">
-                      <Text
-                        color="yellow.800"
-                        fontWeight="700"
-                        textTransform="uppercase"
-                        borderBottom="3px solid"
-                      >
-                        {postData.tag}
-                      </Text>
-                      <Heading
-                        color="gray.850"
-                        mt={5}
-                        fontFamily="Gentium"
-                        fontSize={{ base: "1.75rem", lg: "2.25rem" }}
-                        textAlign="center"
-                      >
-                        {ReactHtmlParser(postData.title)}
-                      </Heading>
-                      <Text
-                        mt=".25rem"
-                        fontStyle="italic"
-                        color="gray.300"
-                        fontWeight="600"
-                        fontSize=".875rem"
-                        mb="6"
-                        textAlign="center"
-                      >
-                        {postData.author} <br />
-                        {postData.updatedAt} • Tempo de leitura:{" "}
-                        {calculateReadingTime(postData.content)} minutos
-                      </Text>
-                    </Flex>
-                    <Text
-                      className={styles.postContent}
-                      color="gray.800"
-                      fontSize={{ base: "16px", lg: "18px" }}
-                      lineHeight={{ base: "28px", lg: "32px" }}
-                      letterSpacing=".1008px"
-                    >
-                      {ReactHtmlParser(postData.content)}
-                    </Text>
-
-                    <Divider />
-
-                    <Text
-                      className={styles.postNote}
-                      color="gray.800"
-                      fontSize={{ base: "16px", lg: "18px" }}
-                      lineHeight={{ base: "28px", lg: "32px" }}
-                      letterSpacing=".1008px"
-                    >
-                      {ReactHtmlParser(postData.note)}
-                    </Text>
-                  </Flex>
-                </Flex>
-              </WrapItem>
-            </Wrap>
+      <Flex mt="65px" mb="48px" direction="column" align="center">
+        <Flex
+          direction="column"
+          w="100vw"
+          h={{ base: "200px", md: "320px", lg: "450px" }}
+          justify="center"
+          align="center"
+          bgColor="#000"
+          zIndex="hide"
+        >
+          <Image
+            className={styles.container}
+            bgPosition="center"
+            bgImage={postData.banner.url}
+            maxW="1350px"
+            w="100%"
+            h="100%"
+            bgSize="cover"
+          />
+        </Flex>
+        <Flex direction="column" w={{ base: "90%", lg: "48.75rem" }} mt="36px">
+          <Flex direction="column" align="center" justify="center">
+            <Text
+              color="yellow.800"
+              fontWeight="700"
+              textTransform="uppercase"
+              borderBottom="3px solid"
+            >
+              {postData.tag}
+            </Text>
+            <Heading
+              color="gray.850"
+              mt={5}
+              fontFamily="Gentium"
+              fontSize={{ base: "1.75rem", lg: "2.25rem" }}
+              textAlign="center"
+            >
+              {ReactHtmlParser(postData.title)}
+            </Heading>
+            <Text
+              mt=".25rem"
+              fontStyle="italic"
+              color="gray.300"
+              fontWeight="600"
+              fontSize=".875rem"
+              mb="6"
+              textAlign="center"
+            >
+              {postData.author} <br />
+              {postData.updatedAt} • Tempo de leitura:{" "}
+              {calculateReadingTime(postData.content)} minutos
+            </Text>
           </Flex>
+          <Text
+            className={styles.postContent}
+            color="gray.800"
+            fontSize={{ base: "16px", lg: "18px" }}
+            lineHeight={{ base: "28px", lg: "32px" }}
+            letterSpacing=".1008px"
+          >
+            {ReactHtmlParser(postData.content)}
+          </Text>
+
+          <Divider />
+
+          <Text
+            className={styles.postNote}
+            color="gray.800"
+            fontSize={{ base: "16px", lg: "18px" }}
+            lineHeight={{ base: "28px", lg: "32px" }}
+            letterSpacing=".1008px"
+          >
+            {ReactHtmlParser(postData.note)}
+          </Text>
         </Flex>
       </Flex>
 
