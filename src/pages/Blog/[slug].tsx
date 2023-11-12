@@ -35,6 +35,7 @@ export function Post() {
     content: "",
     updatedAt: "",
     note: "",
+    seoTitle: "",
   });
 
   const getPost = async () => {
@@ -49,6 +50,7 @@ export function Post() {
       tag: response.data.tag,
       author: RichText.asText(response.data.author),
       title: RichText.asHtml(response.data.title),
+      seoTitle: RichText.asText(response.data.title),
       content: RichText.asHtml(response.data.content),
       note: RichText.asHtml(response.data.note),
       updatedAt: response.last_publication_date
@@ -77,8 +79,21 @@ export function Post() {
   return (
     <Flex direction="column" align="center" justify="center">
       <Header />
-      <title>Comunidade Ignis | {ReactHtmlParser(postData.title)} </title>
+
       <Helmet>
+        <title>
+          {`${ ReactHtmlParser(postData.seoTitle)}` }
+        </title>
+
+        <meta 
+          name={`${ ReactHtmlParser(postData.seoTitle)}`}
+          content={`${ReactHtmlParser(postData.content)}`}
+        />
+        <meta 
+          property="image"
+          content={postData.banner.url}
+        />
+
         <meta
           property="og:title"
           content={`Comunidade Ignis | ${ReactHtmlParser(postData.title)}`}
